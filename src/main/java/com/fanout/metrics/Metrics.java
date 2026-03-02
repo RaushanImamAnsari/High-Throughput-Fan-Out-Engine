@@ -17,6 +17,9 @@ public class Metrics {
         totalProcessed.incrementAndGet();
     }
 
+
+
+
     public static void markFailure(String sink) {
         failure.computeIfAbsent(sink, k -> new AtomicLong()).incrementAndGet();
         totalProcessed.incrementAndGet();
